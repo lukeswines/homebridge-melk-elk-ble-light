@@ -1,8 +1,6 @@
-# homebridge-melk-ble-light
+# homebridge-melk-elk-ble-light
 
 Homebridge platform plugin for controlling MELK/ELK BLE lights.
-
-This plugin ports the BLE packet behavior from `ble-script.py` into a Homebridge accessory platform.
 
 ## Features
 
