@@ -1,0 +1,69 @@
+{
+  "pluginAlias": "MelkBlePlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "MELK BLE Light Platform",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform Name",
+        "type": "string",
+        "default": "MELK BLE Lights",
+        "required": true
+      },
+      "devices": {
+        "title": "Devices",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Accessory Name",
+              "type": "string",
+              "required": true
+            },
+            "targetNames": {
+              "title": "BLE Name Matches",
+              "type": "array",
+              "required": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "writeUuid": {
+              "title": "Write Characteristic UUID",
+              "type": "string",
+              "default": "0000fff3-0000-1000-8000-00805f9b34fb"
+            },
+            "writeWithResponse": {
+              "title": "Write With Response",
+              "type": "boolean",
+              "default": false
+            },
+            "scanTimeoutMs": {
+              "title": "Scan Timeout (ms)",
+              "type": "integer",
+              "default": 1000
+            },
+            "connectTimeoutMs": {
+              "title": "Connect Timeout (ms)",
+              "type": "integer",
+              "default": 8000
+            },
+            "postWriteDelayMs": {
+              "title": "Post Write Delay (ms)",
+              "type": "integer",
+              "default": 50
+            },
+            "idleTimeoutSeconds": {
+              "title": "Idle Disconnect Timeout (seconds)",
+              "type": "number",
+              "default": 300
+            }
+          }
+        }
+      }
+    }
+  }
+}

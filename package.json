@@ -1,0 +1,36 @@
+{
+  "name": "homebridge-melk-ble-light",
+  "version": "0.1.0",
+  "description": "Homebridge plugin for MELK BLE lights",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "ble",
+    "light"
+  ],
+  "license": "MIT",
+  "engines": {
+    "homebridge": "^1.9.0 || ^2.0.0",
+    "node": ">=20.0.0"
+  },
+  "homebridge": {
+    "platforms": [
+      "MelkBlePlatform"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@abandonware/noble": "^1.9.2-26"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "homebridge": "^1.9.0",
+    "typescript": "^5.7.3"
+  }
+}
