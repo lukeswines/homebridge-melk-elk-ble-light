@@ -26,11 +26,14 @@
     "prepare": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@abandonware/noble": "^1.9.2-26"
+    "@abandonware/noble": "^1.9.2-26",
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "homebridge": "^1.9.0 || ^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "homebridge": "^1.9.0",
-    "typescript": "^5.7.3"
+    "homebridge": "^1.9.0"
   }
 }
