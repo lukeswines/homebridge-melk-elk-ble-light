@@ -4,8 +4,13 @@ import type { MelkDeviceConfig, MelkPlatformConfig } from './settings';
 import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
 
 export class MelkBlePlatform implements DynamicPlatformPlugin {
-  public readonly Service = this.api.hap.Service;
-  public readonly Characteristic = this.api.hap.Characteristic;
+  public get Service() {
+    return this.api.hap.Service;
+  }
+
+  public get Characteristic() {
+    return this.api.hap.Characteristic;
+  }
 
   private readonly cachedAccessories = new Map<string, PlatformAccessory>();
   private readonly activeAccessories = new Map<string, MelkLightAccessory>();
